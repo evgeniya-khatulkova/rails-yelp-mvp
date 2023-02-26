@@ -1,0 +1,13 @@
+<%=  form_with model: @restaurant do |f| %>
+<%=  f.text_field :name%>
+<%= f.label :name%>
+<%=  f.text_field :address %>
+<%= f.label :address %>
+<%= f.select :category, ["chinese", "italian", "japanese", "french", "belgian"] %>
+<%= f.label :category %>
+<%= f.submit "Add restaurant" %>
+<% end %>
+
+<%= link_to restaurants_path do%>
+<p>Back to all restaurants</p>
+<% end %>
